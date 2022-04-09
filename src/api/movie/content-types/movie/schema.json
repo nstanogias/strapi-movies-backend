@@ -4,7 +4,8 @@
   "info": {
     "singularName": "movie",
     "pluralName": "movies",
-    "displayName": "movie"
+    "displayName": "movie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,24 +21,6 @@
       "type": "text",
       "required": true
     },
-    "tagline": {
-      "type": "string"
-    },
-    "cover": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
-    },
-    "runtime": {
-      "required": true,
-      "type": "integer"
-    },
     "release_date": {
       "type": "date",
       "required": true
@@ -47,6 +30,9 @@
       "relation": "manyToMany",
       "target": "api::genre.genre",
       "inversedBy": "movies"
+    },
+    "cover": {
+      "type": "string"
     }
   }
 }
